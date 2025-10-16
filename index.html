@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เที่ยวสวิตเซอร์แลนด์</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <nav id="navbar">
+        <h1><a href="index.html">เที่ยวสวิตเซอร์แลนด์</a></h1>
+
+        <div class="nav-links">
+          <a href="index.html">หน้าแรก</a>
+          <a href="zurich.html">ซูริก</a>
+          <a href="lucerne.html">ลูเซิร์น</a>
+          <a href="interlaken.html">อินเทอร์ลาเกน</a>
+          <a href="zermatt.html">เซอร์แมท</a>
+        </div>
+
+        <div id="hamburger-icon" class="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-menu">
+        <div id="close-icon" class="close-icon">&times;</div>
+
+        <a href="index.html">หน้าแรก</a>
+        <a href="zurich.html">ซูริก</a>
+        <a href="lucerne.html">ลูเซิร์น</a>
+        <a href="interlaken.html">อินเทอร์ลาเกน</a>
+        <a href="zermatt.html">เซอร์แมท</a>
+      </div>
+
+      <div class="page-navigator">
+      <a href="#" id="prev-page-btn" class="nav-btn prev" title="หน้าก่อนหน้า">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a href="#" id="next-page-btn" class="nav-btn next" title="หน้าถัดไป">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+
+
+      <div id="scroll-indicator" class="scroll-prompt">
+        <p>เลื่อน</p>
+        <span class="scroll-arrow">&#x2304;</span>
+      </div>
+
+      <div class="hero">
+        <div class="hero-content">
+          <h1>ยินดีต้อนรับสู่สวิตเซอร์แลนด์</h1>
+          <p>
+            สัมผัสธรรมชาติอันยิ่งใหญ่ เทือกเขาแอลป์อันสวยงาม
+            และเมืองสุดโรแมนติกของยุโรป
+          </p>
+          <button onclick="location.href='zurich.html'">เริ่มเที่ยวเลย</button>
+        </div>
+      </div>
+
+      <section class="fade-section intro-section">
+        <h2>ทำไมต้องสวิตเซอร์แลนด์?</h2>
+        <p>
+          ดินแดนแห่งหิมะและภูเขาแอลป์นี้เต็มไปด้วยความงดงามและวัฒนธรรมที่เป็นเอกลักษณ์
+          ไม่ว่าจะเป็นทะเลสาบสีฟ้าใส สะพานไม้โบราณ หรือหมู่บ้านกลางหุบเขา
+          ทุกแห่งล้วนชวนให้คุณหลงใหลตั้งแต่แรกเห็น
+        </p>
+      </section>
+
+      <section class="fade-section city-section">
+        <h2>เมืองท่องเที่ยวยอดนิยม</h2>
+        <div class="city-cards-container">
+          <div class="city-card">
+            <img src="pic/bg1.avif" alt="Zurich" />
+            <div class="card-content">
+              <h3>ซูริก</h3>
+              <p>
+                เมืองที่ใหญ่ที่สุดและมีชีวิตชีวาศูนย์กลางเศรษฐกิจและวัฒนธรรมริมทะเลสาบ
+              </p>
+              <a href="zurich.html" class="card-button">อ่านเพิ่มเติม</a>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <img src="pic/bg.webp" alt="Lucerne" />
+            <div class="card-content">
+              <h3>ลูเซิร์น</h3>
+              <p>
+                เมืองโบราณริมทะเลสาบที่มีสะพานไม้ชาเปลอันเป็นเอกลักษณ์และวิวภูเขาที่งดงาม
+              </p>
+              <a href="lucerne.html" class="card-button">อ่านเพิ่มเติม</a>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <img src="pic/bg2.jpg" alt="Interlaken" />
+            <div class="card-content">
+              <h3>อินเทอร์ลาเกน</h3>
+              <p>
+                เมืองแห่งการผจญภัยที่ตั้งอยู่ระหว่างสองทะเลสาบเป็นประตูสู่ยอดเขายุงเฟรา
+              </p>
+              <a href="interlaken.html" class="card-button">อ่านเพิ่มเติม</a>
+            </div>
+          </div>
+
+          <div class="city-card">
+            <img src="pic/zermatt.webp" alt="zermatt" />
+            <div class="card-content">
+              <h3>เซอร์แมท</h3>
+              <p>
+                เป็นเมืองชนบทเล็กๆ ที่สวยงาม ล้อมรอบด้วยภูเขา
+                ตั้งอยู่บนเทือกเขาแอลป์ในรัฐวาเล ประเทศสวิตเซอร์แลนด์
+                ที่นี่เป็นเมืองท่องเที่ยวที่มีความปลอดภัยสูงมาก
+              </p>
+              <a href="zermatt.html" class="card-button">อ่านเพิ่มเติม</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fade-section fun-facts">
+        <h2>เกร็ดน่ารู้เกี่ยวกับสวิตเซอร์แลนด์</h2>
+        <ul>
+          <li>มีภาษาราชการ 4 ภาษา: เยอรมัน, ฝรั่งเศส, อิตาลี และ โรแมนช์</li>
+          <li>เป็นประเทศที่มีภูเขาสูงกว่า 4,000 เมตร มากที่สุดในยุโรป</li>
+          <li>
+            ช็อกโกแลตสวิสมีชื่อเสียงโด่งดังไปทั่วโลก
+            และชาวสวิสบริโภคช็อกโกแลตมากที่สุดในโลก
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <p>
+        © 2025 Switzerland Travel | จัดทำโดย Students of Suan Sunandha Rajabhat University
+      </p>
+    </footer>
+
+    <script src="java.js"></script>
+  </body>
+</html>

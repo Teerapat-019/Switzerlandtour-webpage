@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เที่ยวสวิตเซอร์แลนด์ - อินเทอร์ลาเกน</title>
+    <link rel="stylesheet" href="interlaken.css">
+    <link rel="stylesheet" href="page-nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <h1><a href="index.html">เที่ยวสวิตเซอร์แลนด์</a></h1>
+
+      <div class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="zurich.html">ซูริก</a>
+        <a href="lucerne.html">ลูเซิร์น</a>
+        <a href="interlaken.html" class="active">อินเทอร์ลาเกน</a>
+        <a href="zermatt.html">เซอร์แมท</a>
+      </div>
+
+      <div id="hamburger-icon" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <div id="close-icon" class="close-icon">&times;</div>
+
+      <a href="index.html">หน้าแรก</a>
+      <a href="zurich.html">ซูริก</a>
+      <a href="lucerne.html">ลูเซิร์น</a>
+      <a href="interlaken.html" class="active">อินเทอร์ลาเกน</a>
+      <a href="zermatt.html">เซอร์แมท</a>
+    </div>
+
+    <div class="page-navigator">
+      <a href="#" id="prev-page-btn" class="nav-btn prev" title="หน้าก่อนหน้า">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a href="#" id="next-page-btn" class="nav-btn next" title="หน้าถัดไป">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <div id="scroll-indicator" class="scroll-prompt">
+      <p>เลื่อน</p>
+      <span class="scroll-arrow">&#x2304;</span>
+    </div>
+
+    <header class="hero-interlaken">
+      <div class="hero-bg-parallax"></div>
+      <div class="hero-content-interlaken">
+        <h1 class="hero-title-interlaken">INTERLAKEN</h1>
+        <p class="hero-subtitle-interlaken">เมืองหลวงแห่งการผจญภัยของยุโรป</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro-section-interlaken">
+        <div class="content-container-interlaken">
+          <div class="intro-grid">
+            <div
+              class="intro-text animate-on-scroll"
+              data-animation="fade-in-right"
+            >
+              <h2 class="section-title-interlaken">ประตูสู่เทือกเขาแอลป์</h2>
+              <p>
+                อินเทอร์ลาเกนตั้งอยู่ระหว่างทะเลสาบทูน (Thun) และทะเลสาบเบรียนซ์
+                (Brienz) ที่งดงามราวกับคริสตัล
+                ที่นี่คือสวรรค์ของคนรักธรรมชาติและผู้แสวงหาความตื่นเต้น
+                เป็นจุดเริ่มต้นที่สมบูรณ์แบบสำหรับการพิชิตยอดเขาชื่อดังอย่างยุงเฟรา
+                (Jungfrau)
+              </p>
+            </div>
+            <div
+              class="intro-image animate-on-scroll"
+              data-animation="fade-in-left"
+            >
+              <img
+                src="pic/elf.jpg"
+                alt="Panoramic view of Interlaken between two lakes"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="attractions-section-interlaken">
+        <div class="content-container-interlaken">
+          <h2
+            class="section-title-interlaken centered-title animate-on-scroll"
+            data-animation="fade-in-up"
+          >
+            จุดหมายที่ไม่ควรพลาด
+          </h2>
+          <div class="attractions-grid-interlaken">
+            <a
+              href="pic/hardercloom.jpg"
+              class="attraction-card-link"
+              data-caption="ชมวิวมุมสูงแบบพาโนรามาของเมืองอินเทอร์ลาเกนและสองทะเลสาบจาก 'Top of Interlaken'"
+            >
+              <div
+                class="attraction-card-interlaken animate-on-scroll"
+                data-animation="fade-in-up"
+                data-delay="100"
+              >
+                <div
+                  class="card-image"
+                  style="background-image: url('pic/hardercloom.jpg')"
+                ></div>
+                <div class="card-overlay">
+                  <div class="card-header">
+                    <i class="fas fa-mountain"></i>
+                    <h3>ฮาร์เดอร์ คูลม์</h3>
+                  </div>
+                  <div class="card-description">
+                    <p>
+                      ชมวิวมุมสูงแบบพาโนรามาของเมืองอินเทอร์ลาเกนและสองทะเลสาบจาก
+                      "Top of Interlaken"
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="pic/lake-brienz.jpg"
+              class="attraction-card-link"
+              data-caption="สัมผัสน้ำทะเลสาบสีเทอร์ควอยซ์ที่ใสสะอาดและหมู่บ้านริมทะเลสาบที่งดงาม"
+            >
+              <div
+                class="attraction-card-interlaken animate-on-scroll"
+                data-animation="fade-in-up"
+                data-delay="200"
+              >
+                <div
+                  class="card-image"
+                  style="background-image: url('pic/lake-brienz.jpg')"
+                ></div>
+                <div class="card-overlay">
+                  <div class="card-header">
+                    <i class="fas fa-ship"></i>
+                    <h3>ล่องเรือทะเลสาบเบรียนซ์</h3>
+                  </div>
+                  <div class="card-description">
+                    <p>
+                      สัมผัสน้ำทะเลสาบสีเทอร์ควอยซ์ที่ใสสะอาดและหมู่บ้านริมทะเลสาบที่งดงาม
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="pic/jungfrau.jpg"
+              class="attraction-card-link"
+              data-caption="เดินทางสู่ 'Top of Europe' ด้วยรถไฟเพื่อชมทิวทัศน์ธารน้ำแข็งที่ยิ่งใหญ่"
+            >
+              <div
+                class="attraction-card-interlaken animate-on-scroll"
+                data-animation="fade-in-up"
+                data-delay="300"
+              >
+                <div
+                  class="card-image"
+                  style="background-image: url('pic/jungfrau.jpg')"
+                ></div>
+                <div class="card-overlay">
+                  <div class="card-header">
+                    <i class="fas fa-train"></i>
+                    <h3>ยอดเขายุงเฟรา</h3>
+                  </div>
+                  <div class="card-description">
+                    <p>
+                      เดินทางสู่ "Top of Europe"
+                      ด้วยรถไฟเพื่อชมทิวทัศน์ธารน้ำแข็งที่ยิ่งใหญ่
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="activities-section-interlaken">
+        <div class="content-container-interlaken">
+          <h2
+            class="section-title-interlaken centered-title animate-on-scroll"
+            data-animation="fade-in-up"
+          >
+            การผจญภัยรออยู่
+          </h2>
+          <div class="activities-grid-interlaken">
+            <div
+              class="activity-card animate-on-scroll"
+              data-animation="zoom-in"
+            >
+              <div class="activity-icon">
+                <i class="fas fa-parachute-box"></i>
+              </div>
+              <h3>พาราไกลดิ้ง</h3>
+              <p>ทะยานเหนือเมืองและทะเลสาบ</p>
+            </div>
+            <div
+              class="activity-card animate-on-scroll"
+              data-animation="zoom-in"
+              data-delay="150"
+            >
+              <div class="activity-icon"><i class="fas fa-hiking"></i></div>
+              <h3>เดินป่า</h3>
+              <p>สำรวจเส้นทางธรรมชาติกว่าร้อยเส้นทาง</p>
+            </div>
+            <div
+              class="activity-card animate-on-scroll"
+              data-animation="zoom-in"
+              data-delay="300"
+            >
+              <div class="activity-icon"><i class="fas fa-ship"></i></div>
+              <h3>พายเรือคายัค</h3>
+              <p>พายเรือในทะเลสาบสีฟ้าคราม</p>
+            </div>
+            <div
+              class="activity-card animate-on-scroll"
+              data-animation="zoom-in"
+              data-delay="450"
+            >
+              <div class="activity-icon"><i class="fas fa-biking"></i></div>
+              <h3>ปั่นจักรยานเสือภูเขา</h3>
+              <p>ท้าทายเส้นทางบนไหล่เขา</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+      <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <footer>
+      <p>
+        © 2025 Switzerland Travel | จัดทำโดย Students of Suan Sunandha Rajabhat
+        University
+      </p>
+    </footer>
+
+    <script src="interlaken.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>เที่ยวสวิตเซอร์แลนด์ - ซูริก</title>
+  <link rel="stylesheet" href="zurich.css">
+  <link rel="stylesheet" href="page-nav.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <nav id="navbar">
+      <h1><a href="index.html">เที่ยวสวิตเซอร์แลนด์</a></h1>
+
+      <div class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="zurich.html" class="active">ซูริก</a>
+        <a href="lucerne.html">ลูเซิร์น</a>
+        <a href="interlaken.html">อินเทอร์ลาเกน</a>
+        <a href="zermatt.html">เซอร์แมท</a>
+      </div>
+
+      <div id="hamburger-icon" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <div id="close-icon" class="close-icon">&times;</div>
+
+      <a href="index.html">หน้าแรก</a>
+      <a href="zurich.html" class="active">ซูริก</a>
+      <a href="lucerne.html">ลูเซิร์น</a>
+      <a href="interlaken.html">อินเทอร์ลาเกน</a>
+      <a href="zermatt.html">เซอร์แมท</a>
+    </div>
+
+    <div class="page-navigator">
+      <a href="#" id="prev-page-btn" class="nav-btn prev" title="หน้าก่อนหน้า">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a href="#" id="next-page-btn" class="nav-btn next" title="หน้าถัดไป">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title-zurich">ZURICH</h1>
+        <div>
+          <p class="hero-subtitle">ที่สุดแห่งมหานครริมทะเลสาบ</p>
+        </div>
+    </header>
+
+    <div id="scroll-indicator" class="scroll-prompt">
+      <p>เลื่อน</p>
+      <span class="scroll-arrow">&#x2304;</span>
+    </div>
+
+    <main>
+      <section class="intro-section">
+        <div class="container">
+          <div class="intro-grid">
+            <div class="intro-text">
+              <h2 class="section-title">มนต์เสน่ห์แห่งซูริก</h2>
+              <p>
+                ซูริกไม่ได้เป็นเพียงเมืองที่ใหญ่ที่สุดในสวิตเซอร์แลนด์
+                แต่เป็นศูนย์รวมของวัฒนธรรม นวัตกรรม และคุณภาพชีวิตระดับโลก
+                ที่นี่...ประวัติศาสตร์อันยาวนานของย่านเมืองเก่าถูกโอบล้อมด้วยพลังขับเคลื่อนของเมืองสมัยใหม่ได้อย่างลงตัวที่สุด
+              </p>
+            </div>
+            <div class="intro-image">
+              <img src="pic/oldtown.jpg" alt="ย่านเมืองเก่าซูริก" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="attractions-section">
+        <div class="container">
+          <h2 class="section-title text-light">สถานที่ห้ามพลาด</h2>
+          <div class="attractions-grid">
+            <div class="attraction-card">
+              <div class="card-image" style="background-image: url('pic/grossmunster.jpg')"></div>
+              <div class="card-content">
+                <h3>โบสถ์ Grossmünster</h3>
+                <p>
+                  ปีนขึ้นไปบนหอคอยคู่สัญลักษณ์ของเมือง
+                  เพื่อชมทิวทัศน์อันน่าทึ่งของแม่น้ำลิมมัตและเมืองเก่า
+                </p>
+              </div>
+            </div>
+            <div class="attraction-card">
+              <div class="card-image" style="
+                  background-image: url('pic/lake.jpg');
+                "></div>
+              <div class="card-content">
+                <h3>ทะเลสาบซูริก</h3>
+                <p>
+                  สัมผัสชีวิตชีวาของเมืองด้วยการล่องเรือ, ปิกนิกริมฝั่ง
+                  หรือเพียงแค่นั่งชมความงามของน้ำและภูเขา
+                </p>
+              </div>
+            </div>
+            <div class="attraction-card">
+              <div class="card-image" style="
+                  background-image: url('pic/mu.jpg');
+                "></div>
+              <div class="card-content">
+                <h3>พิพิธภัณฑ์แห่งชาติสวิส</h3>
+                <p>
+                  เดินทางย้อนเวลาผ่านประวัติศาสตร์และวัฒนธรรมของสวิตเซอร์แลนด์ในปราสาทเทพนิยายแห่งนี้
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery-section">
+        <div class="container">
+          <h2 class="section-title">ภาพความทรงจำแห่งซูริก</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="pic/uetliberg.jpg" alt="วิวจาก Uetliberg" class="gallery-image" />
+            </div>
+            <div class="gallery-item">
+              <img src="pic/street.jpg" alt="ถนน Bahnhofstrasse" class="gallery-image" />
+            </div>
+            <div class="gallery-item">
+              <img src="pic/river.jpg" alt="แม่น้ำ Limmat" class="gallery-image" />
+            </div>
+            <div class="gallery-item">
+              <img src="pic/church.webp" alt="โบสถ์ Fraumünster" class="gallery-image" />
+            </div>
+            <div class="gallery-item">
+              <img src="pic/train.jpg" alt="ภายในสถานีรถไฟ" class="gallery-image" />
+            </div>
+            <div class="gallery-item">
+              <img src="pic/zur.avif" alt="ตรอกซอกซอยในเมืองเก่า" class="gallery-image" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+  <footer>
+    <p>
+      © 2025 Switzerland Travel | จัดทำโดย Students of Suan Sunandha Rajabhat University
+    </p>
+  </footer>
+
+  <script src="zurich.js"></script>
+</body>
+
+</html>

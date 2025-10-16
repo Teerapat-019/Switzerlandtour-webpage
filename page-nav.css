@@ -1,0 +1,71 @@
+/* === Page Navigation Buttons CSS === */
+
+.page-navigator {
+    /* ซ่อนชั่วคราวขณะที่หน้าเว็บยังโหลดไม่สมบูรณ์ */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.page-navigator.loaded {
+    opacity: 1;
+}
+
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999; /* ให้แสดงอยู่เหนือเนื้อหาอื่น แต่ต่ำกว่า Navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(11, 44, 76, 0.6); /* สีน้ำเงินเข้มโปร่งแสง */
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px); /* เพิ่มเอฟเฟกต์กระจกฝ้า */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* --- ส่วนของ Animation และ Effect --- */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.6; /* ทำให้ปุ่มโปร่งแสงเล็กน้อยในสถานะปกติ */
+}
+
+.nav-btn.prev {
+    left: 25px; /* ระยะห่างจากขอบซ้าย */
+}
+
+.nav-btn.next {
+    right: 25px; /* ระยะห่างจากขอบขวา */
+}
+
+/* --- เอฟเฟกต์ตอนเอาเมาส์ไปชี้ --- */
+.nav-btn:hover {
+    background-color: #00c8ff; /* เปลี่ยนเป็นสีฟ้าสดใส */
+    transform: translateY(-50%) scale(1.15); /* ขยายใหญ่ขึ้น */
+    box-shadow: 0 8px 25px rgba(0, 200, 255, 0.4);
+    opacity: 1; /* ทำให้ทึบแสง */
+    color: white;
+}
+
+/* --- เอฟเฟกต์ตอน Scroll --- */
+/* คลาสนี้จะถูกเพิ่มโดย JavaScript เมื่อ scroll กลับไปบนสุด */
+.nav-btn.scrolled-top {
+   opacity: 0;
+   transform: translateY(-50%) scale(0.5);
+   pointer-events: none; /* ทำให้คลิกไม่ได้เมื่อซ่อนอยู่ */
+}
+
+/* --- ซ่อนปุ่มเมื่อไม่มีหน้าก่อนหน้า หรือหน้าถัดไป --- */
+.nav-btn.hidden {
+    display: none !important;
+}
+
+.nav-btn.inactive-hide {
+   opacity: 0;
+   transform: translateY(-50%) scale(0.5);
+   pointer-events: none; /* ทำให้คลิกไม่ได้เมื่อซ่อนอยู่ */
+}

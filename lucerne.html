@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>เที่ยวสวิตเซอร์แลนด์ - ลูเซิร์น</title>
+    <link rel="stylesheet" href="lucerne.css">
+    <link rel="stylesheet" href="page-nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav id="navbar">
+      <h1><a href="index.html">เที่ยวสวิตเซอร์แลนด์</a></h1>
+
+      <div class="nav-links">
+        <a href="index.html">หน้าแรก</a>
+        <a href="zurich.html">ซูริก</a>
+        <a href="lucerne.html" class="active">ลูเซิร์น</a>
+        <a href="interlaken.html">อินเทอร์ลาเกน</a>
+        <a href="zermatt.html">เซอร์แมท</a>
+      </div>
+
+      <div id="hamburger-icon" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu">
+      <div id="close-icon" class="close-icon">&times;</div>
+
+      <a href="index.html">หน้าแรก</a>
+      <a href="zurich.html">ซูริก</a>
+      <a href="lucerne.html" class="active">ลูเซิร์น</a>
+      <a href="interlaken.html">อินเทอร์ลาเกน</a>
+      <a href="zermatt.html">เซอร์แมท</a>
+    </div>
+
+    <div class="page-navigator">
+      <a href="#" id="prev-page-btn" class="nav-btn prev" title="หน้าก่อนหน้า">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a href="#" id="next-page-btn" class="nav-btn next" title="หน้าถัดไป">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <div id="scroll-indicator" class="scroll-prompt">
+      <p>เลื่อน</p>
+      <span class="scroll-arrow">&#x2304;</span>
+    </div>
+
+    <header class="hero-lucerne">
+      <div class="hero-bg-parallax"></div>
+      <div class="hero-content-lucerne">
+        <h1 class="hero-title-lucerne">LUCERNE</h1>
+        <p class="hero-subtitle-lucerne">ไข่มุกแห่งสวิตเซอร์แลนด์ตอนกลาง</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-colored">
+        <div class="content-container-lucerne">
+          <div class="staggered-grid">
+            <div
+              class="staggered-image animate-on-scroll"
+              data-animation="fade-in-left"
+            >
+              <img src="pic/chapel-bridge.jpg" alt="Chapel Bridge in Lucerne" />
+            </div>
+            <div
+              class="staggered-text animate-on-scroll"
+              data-animation="fade-in-right"
+            >
+              <h2 class="section-title-lucerne">มนต์เสน่ห์ริมทะเลสาบ</h2>
+              <p>
+                ลูเซิร์นเป็นเมืองที่มีชีวิตชีวาและงดงามราวกับภาพวาด
+                ตั้งอยู่ริมทะเลสาบสี่รัฐ โอบล้อมด้วยเทือกเขาแอลป์อันตระการตา
+                เมืองนี้ผสมผสานสถาปัตยกรรมยุคกลางเข้ากับดีไซน์ร่วมสมัยได้อย่างลงตัว
+                สร้างเสน่ห์ที่ไม่เหมือนใคร
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content-container-lucerne">
+          <h2
+            class="section-title-lucerne centered-title animate-on-scroll"
+            data-animation="fade-in-up"
+          >
+            ไฮไลท์ที่ไม่ควรพลาด
+          </h2>
+          <div class="attractions-grid-lucerne">
+            <div
+              class="attraction-card-lucerne animate-on-scroll"
+              data-animation="fade-in-up"
+              data-delay="100"
+            >
+              <div
+                class="card-bg-image"
+                style="background-image: url('pic/pilatus3.jpg')"
+              ></div>
+              <div class="card-content-lucerne">
+                <h3>ยอดเขาพิลาตุส</h3>
+                <p>ขึ้นสู่ "ภูเขามังกร" ด้วยรถไฟฟันเฟืองที่ชันที่สุดในโลก</p>
+              </div>
+            </div>
+            <div
+              class="attraction-card-lucerne animate-on-scroll"
+              data-animation="fade-in-up"
+              data-delay="200"
+            >
+              <div
+                class="card-bg-image"
+                style="background-image: url('pic/lion-monument.jpg')"
+              ></div>
+              <div class="card-content-lucerne">
+                <h3>อนุสาวรีย์สิงโต</h3>
+                <p>เยี่ยมชมประติมากรรมสิงโตที่แกะสลักบนหน้าผาหินทราย</p>
+              </div>
+            </div>
+            <div
+              class="attraction-card-lucerne animate-on-scroll"
+              data-animation="fade-in-up"
+              data-delay="300"
+            >
+              <div
+                class="card-bg-image"
+                style="background-image: url('pic/oldtownlucerne.jpg')"
+              ></div>
+              <div class="card-content-lucerne">
+                <h3>ย่านเมืองเก่า</h3>
+                <p>เดินเล่นในตรอกซอกซอย ชมอาคารเก่าแก่สีสันสดใส</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2025 Switzerland Travel | จัดทำโดย Students of Suan Sunandha Rajabhat
+        University
+      </p>
+    </footer>
+
+    <script src="lucerne.js"></script>
+  </body>
+</html>

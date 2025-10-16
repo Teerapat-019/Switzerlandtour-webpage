@@ -1,0 +1,442 @@
+/* --- General Body and Font Settings --- */
+:root {
+    --lucerne-navy: #0B2C4C;
+    --lucerne-gold: #D4AF37;
+    --lucerne-light: #f8f9fa;
+    --lucerne-cream: #f0f4f8; /* 💡 NEW: Added a soft cream/light blue color */
+    --text-dark: #333;
+    --text-light-gray: #eee;
+}
+
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--lucerne-light);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* --- Navbar (คงเดิม) --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    z-index: 1000;
+    transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+#navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+#navbar h1 a, 
+#navbar a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#navbar.scrolled h1 a, 
+#navbar.scrolled a {
+    color: #0b2c4c;
+}
+
+#navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+#navbar div a {
+    margin-left: 1.8rem;
+    font-weight: 500;
+    position: relative;
+    white-space: nowrap; /* Prevents links from wrapping */
+}
+
+#navbar div a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #00c8ff;
+    transition: width 0.4s ease;
+}
+
+#navbar div a:hover::after, 
+#navbar div a.active::after {
+    width: 100%;
+}
+
+/* === KEY FIX FOR RESPONSIVENESS === */
+/* This part hides the links on smaller screens to prevent overflow */
+@media (max-width: 992px) {
+    #navbar div a {
+        display: none;
+    }
+    /* You can add a hamburger menu icon here in the future */
+}
+
+@media (max-width: 768px) {
+     #navbar { 
+        padding: 1rem 1.5rem; 
+     }
+}
+
+.scroll-prompt {
+    /* คุณสมบัติจัดวางเดิม */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* ... สไตล์สีและพื้นหลังเดิม ... */
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    
+    /* 💡 การแก้ไข: ใช้ Flexbox จัดเรียงให้อยู่กึ่งกลาง */
+    display: flex;
+    flex-direction: column; /* จัดเรียงข้อความและลูกศรในแนวตั้ง */
+    align-items: center; /* จัดให้อยู่กึ่งกลางในแนวนอน */
+    padding: 10px 15px; /* เพิ่ม padding ให้มีพื้นที่หายใจรอบๆ */
+    
+    /* Animation Properties */
+    animation: bounce 1.5s infinite; 
+}
+
+/* ลบ padding ที่เกินจำเป็นออกจาก p เพราะรวมไปอยู่ใน .scroll-prompt แล้ว */
+.scroll-prompt p {
+    margin: 0; /* ลบ margin เริ่มต้นออก */
+    font-size: 18px; 
+}
+
+.scroll-arrow {
+    /* 💡 การแก้ไข: กำหนดขนาดให้ลูกศรชัดเจนและห่างจากข้อความ */
+    font-size: 24px; 
+    line-height: 1; /* ควบคุมระยะบรรทัด */
+    margin-top: -3px; /* ระยะห่างระหว่าง "เลื่อน" กับลูกศร */
+    color: rgb(255, 255, 255); /* ทำให้ลูกศรสีอ่อนลงเล็กน้อย */
+}
+
+#scroll-indicator.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Keyframes สำหรับ Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translate(-50%, 0); 
+    }
+    40% {
+        transform: translate(-50%, -10px); 
+    }
+    60% {
+        transform: translate(-50%, -5px); 
+    }
+}
+
+/* Hero Section with Parallax */
+.hero-lucerne {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-bg-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pic/lucernecity.avif');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero-content-lucerne {
+    transform: translateY(-50px); /* Adjust vertical position */
+}
+
+.hero-title-lucerne {
+    font-size: clamp(3.5rem, 12vw, 8rem);
+    font-weight: 700;
+    letter-spacing: .5rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    margin: 0;
+    animation: text-reveal 1.5s ease-out forwards;
+}
+
+.hero-subtitle-lucerne {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 300;
+    margin-top: 1rem;
+    color: var(--text-light-gray);
+    opacity: 0;
+    animation: fade-in 0s ease-out 1s forwards;
+}
+
+@keyframes text-reveal {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Main Content Styles */
+
+/*  NEW: Section with a background color */
+.section-colored {
+    background-color: var(--lucerne-cream);
+}
+
+.content-container-lucerne {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 6rem 2rem;
+}
+
+.section-title-lucerne {
+    font-size: 2.8rem;
+    color: var(--lucerne-navy);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Staggered (Asymmetrical) Layout */
+.staggered-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    /* margin-bottom: 8rem; - Removed from here, padding is handled by parent */
+}
+ 
+.staggered-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    display: block;
+    /* 💡 ทำให้การเปลี่ยนแปลง "transform" และ "box-shadow" นุ่มนวลขึ้น */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.staggered-image img:hover {
+    /* 💡 ขยายรูป 5% และเพิ่มเงาให้เข้มขึ้นตอน hover */
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+
+.staggered-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* New Interactive Attraction Cards */
+.attractions-grid-lucerne {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.attraction-card-lucerne {
+    position: relative;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.card-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.attraction-card-lucerne:hover .card-bg-image {
+    transform: scale(1.1);
+}
+
+.card-content-lucerne {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    transform: translateY(40%);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.attraction-card-lucerne:hover .card-content-lucerne {
+    transform: translateY(0);
+}
+
+.card-content-lucerne h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    color: var(--lucerne-gold);
+}
+
+.card-content-lucerne p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-out 0.2s;
+}
+
+.attraction-card-lucerne:hover .card-content-lucerne p {
+    opacity: 1;
+}
+
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-on-scroll[data-animation="fade-in-up"] { transform: translateY(50px); }
+.animate-on-scroll[data-animation="fade-in-left"] { transform: translateX(-50px); }
+.animate-on-scroll[data-animation="fade-in-right"] { transform: translateX(50px); }
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .staggered-grid {
+        grid-template-columns: 1fr;
+    }
+    .staggered-image {
+        order: -1; /* Image comes first on mobile */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- ส่วนควบคุมไอคอน Hamburger --- */
+.hamburger-icon {
+    display: none; /* ซ่อนไอคอนบนจอใหญ่ */
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white; 
+    z-index: 1002;
+}
+
+#navbar.scrolled .hamburger-icon {
+    color: #0b2c4c; /* เปลี่ยนสีไอคอนตอน scroll */
+}
+
+/* --- ส่วนควบคุมเมนูที่สไลด์ออกมา --- */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* ซ่อนเมนูไว้นอกจอ */
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: rgba(11, 44, 76, 0.98);
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: right 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.mobile-menu.active {
+    right: 0; /* ทำให้เมนูเลื่อนเข้ามาในจอ */
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(0, 200, 255, 0.2);
+}
+
+/* --- ส่วนควบคุมปุ่มปิด (X) --- */
+.close-icon {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-icon:hover {
+    transform: rotate(90deg);
+}
+
+/* --- Media Query (คำสั่งสำหรับจอมือถือ) --- */
+@media (max-width: 992px) {
+    #navbar .nav-links {
+        display: none; /* ซ่อนเมนูของ Desktop */
+    }
+    .hamburger-icon {
+        display: block; /* แสดงไอคอน Hamburger */
+    }
+}
+
+/* --- Footer (คงเดิม) --- */
+footer {
+    background-color: black;
+    text-align: center;
+    color: #ccc;
+    padding: 20px;
+    width: 100%;
+    flex-shrink: 0;
+}
